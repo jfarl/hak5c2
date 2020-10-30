@@ -28,7 +28,7 @@ You can run the image directly with docker or with docker-compose (check the [ex
 The easiest way to run a container locally (assuming you build it yourself) would be:
 
 ```sh
-docker run -d --name hak5c2 hak5c2
+docker run -d --name hak5c2 jfarl/hak5c2
 ```
 
 Then you will be able to access the webinterface by navigating to localhost:8080.
@@ -42,7 +42,7 @@ If you want to run it externally accessible (e.g. on a VPS) you have to publish 
 The application will take the hostname of the container as the hostname argument. So if you made a DNS entry use the FQDN as hostname, if not then the public IP of your server.
 
 ```sh
-docker run -d -p 8080:8080 -p 2022:2022 --name hak5c2 --hostname=test.test.com hak5c2
+docker run -d -p 8080:8080 -p 2022:2022 --name hak5c2 --hostname=test.test.com jfarl/hak5c2
 ```
 
 ## Environment variables
