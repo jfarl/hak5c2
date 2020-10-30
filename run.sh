@@ -43,4 +43,4 @@ hostname="-hostname $(hostname -f)"
 
 echo "using following settings:" $hostname $certFile $db $https $keyFile $listenip $listenport $reverseProxy $reverseProxyPort $sshport
 
-/app/c2_community-linux-64 $hostname $certFile $db $https $keyFile $listenip $listenport $reverseProxy $reverseProxyPort $sshport
+/app/latest_amd64_linux $hostname $certFile $db $https $keyFile $listenip $listenport $reverseProxy $reverseProxyPort $sshport

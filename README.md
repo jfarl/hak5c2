@@ -1,4 +1,4 @@
-![Docker Pulls](https://img.shields.io/docker/pulls/lindezagrey/hak5c2?style=plastic)
+![Docker Pulls](https://img.shields.io/docker/pulls/jfarl/hak5c2?style=plastic)
 
 # 🐋 Alpine based hak5c² container
 
@@ -8,7 +8,7 @@ Quick start for local tests (assuming your local ip is 192.168.1.1):
 
 ```sh
 docker volume create c2DB
-docker run -d -p 8080:8080 -p 2022:2022 -e db=/home/c2.db -v c2DB:/home --name hak5c2 --hostname=192.168.1.1 lindezagrey/hak5c2
+docker run -d -p 8080:8080 -p 2022:2022 -e db=/home/c2.db -v c2DB:/home --name hak5c2 --hostname=192.168.1.1 jfarl/hak5c2
 ```
 
 ## Build options
@@ -19,7 +19,7 @@ You can build the image by yourself with any of the provided docker compose file
 * either build the image with ```docker build --rm -f "Dockerfile" -t hak5c2 .```
 * or if you use docker compose ```docker-compose -f "docker-compose.yml" up -d --build```
 
-Or for a quickstart you can use a prepared image from [Dockerhub](https://hub.docker.com/r/lindezagrey/hak5c2) which is based on this repository.
+Or for a quickstart you can use a prepared image from [Dockerhub](https://hub.docker.com/r/jfarl/hak5c2) which is based on this repository.
 
 ## Deployment options
 
@@ -54,7 +54,7 @@ docker run -d -e reverseProxy=True -e reverseProxyPort=443 --name hak5c2 hak5c2
 ```
 
 ```sh
-Usage of ./c2_community-linux-64:
+Usage of ./latest_amd64_linux:
  -certFile string
     Custom SSL Certificate file (disabled letsencrypt)
  -db string
