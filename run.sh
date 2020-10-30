@@ -39,7 +39,12 @@ if ! [ -z "$sshport" ]; then
     sshport="-sshport $sshport"
 fi
 
-hostname="-hostname $(hostname -f)"
+if ! [ -z "$hostname" ]; then
+    hostname="-hostname $hostname"
+else
+	hostname="-hostname $(hostname -f)"
+fi
+
 
 echo "using following settings:" $hostname $certFile $db $https $keyFile $listenip $listenport $reverseProxy $reverseProxyPort $sshport
 
